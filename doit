@@ -1,0 +1,14 @@
+#!/bin/bash 
+git clone https://github.com/sainnhe/forest-night.git
+cp forest-night/colors/forest-night.vim ~/.vim/colors/
+mkdir -p ~/.vim/colors/
+mkdir -p ~/.vim/autoload/airline/themes
+mkdir -p ~/.vim/autoload/lightline/colorscheme
+cp forest-night/autoload/airline/themes/forest_night.vim ~/.vim/autoload/airline/themes/
+cp forest-night/autoload/lightline/colorscheme/forest_night.vim ~/.vim/autoload/lightline/colorscheme/
+
+
+echo "set termguicolors" >> ~/.vimrc
+echo "let g:forest_night_enable_italic = 1" >> ~/.vimrc 
+echo "let g:forest_night_disable_italic_comment = 1" >> ~/.vimrc 
+echo "colorscheme forest-night" >> ~/.vimrc 
